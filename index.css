@@ -15,8 +15,8 @@
     --positive-color: #37e61c;
     
     --big-font: 2.5rem;
-    --medium-font: 1.3rem;
-    --small-font: 1.1rem;
+    --medium-font: 1.4rem;
+    --small-font: 1.2rem;
 }
 
 /* light mode colors:
@@ -60,19 +60,18 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 8px 20px;
-    height: 5vh;
+    height: 40px;
     margin: 5vh 0;
 }
 
 #balance-block {
-    margin-right: auto;
+    margin: auto auto auto 10px;
     font-weight: bold;
     font-size: var(--medium-font);
     background-color: var(--list-color);
     color: var(--font-color);
     border-radius: 10px;
-    height: 90%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,7 +80,7 @@ body {
 }
 
 #new-transaction {
-    margin-right: 10px;
+    margin: 0 10px 0 10px;
     height: 100%;
     width: fit-content;
     padding: 5px;
@@ -97,8 +96,13 @@ body {
 
 }
 
+#new-transaction:hover {
+    font-size: calc(var(--big-font) * 1.1)
+}
+
 #color-mode-ico {
     height: 100%;
+    margin-right: 10px;
     cursor: pointer;
 }
 
@@ -141,14 +145,12 @@ body {
 }
 
 .list-id {
-    width: 5%
-}
-
-.list-name {
-    width: 60%
+    width: 16px;
+    margin: 0 10px 0 10px;
 }
 
 .list-value {
+    margin-left: auto;
     width: 150px;
     display: flex;
     flex-direction: row;
@@ -157,12 +159,13 @@ body {
 }
 
 .list-date {
-    width: 10%;
+    margin-left: 10px;
     text-align: center;
+    display: flex;
 }
 
 .list-edit {
-    width: auto;
+    margin: 0 0 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,6 +174,7 @@ body {
 }
 
 .list-delete {
+    margin: 0 5px 0 5px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -237,6 +241,35 @@ body {
     border-radius: 5px;
 }
 
-button:hover {
-    scale: 1.15;
+@media screen and (max-width: 660px) {
+    #balance-block {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .list-value {
+        width: 20%;
+    }
+
+    :root {
+        --big-font: 2.3rem;
+        --medium-font: 1.2rem;
+        --small-font: 1.0rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    :root {
+        --big-font: 2.2rem;
+        --medium-font: 1rem;
+        --small-font: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    :root {
+        --big-font: 2.1rem;
+        --medium-font: 1rem;
+        --small-font: 0.7rem;
+    }
 }

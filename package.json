@@ -1,0 +1,14 @@
+{
+  "name": "personal-finances-app",
+  "version": "1.0.0",
+  "description": "Final activity for OneBitCode's JS classes.",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch db.json"
+  },
+  "author": "Alexandre Morais",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}

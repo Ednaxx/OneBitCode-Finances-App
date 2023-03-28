@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finances</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer type="module"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="balance-block">
+            <span>Balance: R$</span>
+            <span id="balance"></span>
+        </div>
+        <button id="new-transaction">+</button>
+        <img src="./ico/dark-mode.png" alt="color mode icon" id="color-mode-ico">
+    </div>
+    <div id="transaction-list">
+        <div id="list-legend">
+            <div class="list-id">id</div>
+            <div class="list-name">Name</div>
+            <div class="list-value">Value</div>
+            <div class="list-date">Date</div>
+        </div>
+    </div>
+
+
+
+    <div id="transaction-window" class="pop-up-window-hidden">
+        <form>
+            <h2>New transaction</h2>
+            <div class="pop-up-divs">
+                <label for="transaction-name">Name:</label>
+                <input type="text" name="name" id="transaction-name">
+            </div>
+            <div class="pop-up-divs">
+                <label for="transaction-value">Value:</label>
+                <input type="number" name="value" id="transaction-value" step="0.01">
+            </div>
+            <div class="pop-up-divs">
+                <label for="transaction-date">Date:</label>
+                <input type="date" name="date" id="transaction-date">
+            </div>
+            <div class="pop-up-divs">
+                <button id="submit-button">Submit</button>
+                <button id="cancel-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="edit-transaction-window" class="pop-up-window-hidden">
+        <form>
+            <h2>Edit the transaction</h2>
+            <div class="pop-up-divs">
+                <label for="transaction-name-edit">Name:</label>
+                <input type="text" name="name" id="transaction-name-edit">
+            </div>
+            <div class="pop-up-divs">
+                <label for="transaction-value-edit">Value:</label>
+                <input type="number" name="value" id="transaction-value-edit" step="0.01">
+            </div>
+            <div class="pop-up-divs">
+                <label for="transaction-date-edit">Date:</label>
+                <input type="date" name="date" id="transaction-date-edit">
+            </div>
+            <div class="pop-up-divs">
+                <button id="submit-button-edit">Submit</button>
+                <button id="cancel-button-edit">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="confirm-delete-window" class="pop-up-window-hidden">
+        <h2>Are you sure you want to delete this?</h2>
+        <div class="pop-up-divs">
+            <button id="confirm-delete-button">Delete</button>
+            <button id="cancel-delete-button">Cancel</button>
+        </div>
+    </div>
+
+</body>
+</html>
